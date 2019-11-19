@@ -8,12 +8,13 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.wak.refresh.adapter.TestAdapter;
+import com.wak.refresh.head.RingRefreshLayout;
 import com.wak.refresh.refresh.BaseRefreshLayout;
 
 public class MainActivity extends AppCompatActivity {
 
     private RecyclerView recyclerView;
-    private BaseRefreshLayout refreshLayout;
+    private RingRefreshLayout refreshLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

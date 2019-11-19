@@ -142,7 +142,7 @@ public class BaseRefreshLayout extends ViewGroup {
                     if (header != null && !isRefreshing) {
                         goToRefresh(disY);
                     }
-                    goToRefresh(disY);
+                    //  goToRefresh(disY);
                 } else {
                     if (disY >= 0) {
                         goToRefresh(disY);
@@ -260,7 +260,7 @@ public class BaseRefreshLayout extends ViewGroup {
 
     private void goToRefresh(int disY) {
         scrollBy(0, (int) (-disY * 0.5));
-        if (Math.abs(getScrollY()) > header.getMeasuredHeight()) {
+        if (Math.abs(getScrollY()) >= header.getMeasuredHeight()) {
             updateStatus(status.REFRESH_AFTER);
         } else {
             updateStatus(status.REFRESH_BEFORE);
